@@ -1,6 +1,6 @@
 <br>
 <div class="ui container">
-  <form class="ui raised clearing form segment">
+  <form class="ui secondary segment clearing form">
     <h3 class="ui header">Add a Link</h3>
     <div class="field">
       <label for="title">Title: </label>
@@ -12,4 +12,12 @@
     </div>
     <button (click)="addArticle(newTitle, newLink)" class="ui positive right floated button">Submit link</button>
   </form>
+  <div class="ui segment">
+    <div class="ui grid posts">
+      <app-article
+        *ngFor="let article of sortedArticles()"
+        [article]="article"
+      ></app-article>
+    </div>
+  </div>
 </div>

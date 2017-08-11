@@ -1,0 +1,23 @@
+<div class="five wide column center aligned votes">
+  <div class="ui secondary segment large">
+    <div class="value"> {{ article.votes }}</div>
+    <div class="label">Points</div>
+  </div>
+</div>
+<div class="eleven wide column">
+  <a href="{{ article.link }}" class="ui large header"> {{ article.title }}</a>
+  {{ article.domain() }}
+  <br>
+  <div class="ui big horizontal list voters">
+    <div class="item">
+      <a (click)="voteUp()">
+      <i class="arrow up icon"></i> upvote
+    </a>
+    </div>
+    <div class="item">
+      <a (click)="voteDown()" >
+      <i class="arrow down icon"></i>downvote
+    </a>
+    </div>
+  </div>
+</div>
